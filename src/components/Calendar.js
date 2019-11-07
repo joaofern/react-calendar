@@ -76,7 +76,7 @@ function MyCalendar() {
           startAccessor="start"
           endAccessor="end"
           views={["week", "month"]}
-          style={{ height: "70vh", width: "50vw" }}
+          style={{ height: "70vh" }}
           selectable={true}
           onSelectSlot={handleSelect}
           onSelectEvent={handleSelectEvent}

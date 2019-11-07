@@ -14,4 +14,12 @@ function App() {
   );
 }
 
+//Clear console warnings
+function noop() {}
+if (process.env.NODE_ENV !== "development") {
+  console.log = noop;
+  console.warn = noop;
+  console.error = noop;
+}
+
 export default App;
