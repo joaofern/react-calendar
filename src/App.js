@@ -4,6 +4,13 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import MyCalendar from "./components/Calendar";
 
 function App() {
+  //Clear console warnings
+  function noop() {}
+  if (process.env.NODE_ENV !== "development") {
+    console.log = noop;
+    console.warn = noop;
+    console.error = noop;
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -12,14 +19,6 @@ function App() {
       </header>
     </div>
   );
-}
-
-//Clear console warnings
-function noop() {}
-if (process.env.NODE_ENV !== "development") {
-  console.log = noop;
-  console.warn = noop;
-  console.error = noop;
 }
 
 export default App;
